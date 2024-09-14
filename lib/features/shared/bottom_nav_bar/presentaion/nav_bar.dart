@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:unhcr_demo/core/constants/app_colors.dart';
 
+import '../../../../core/core.dart';
 import 'widgets/nav_bar_item.dart';
 
 class NavBar extends StatefulWidget {
@@ -51,16 +52,20 @@ class _NavBarState extends State<NavBar> {
       ),
     ];
 
-    return ClipRRect(
+     return ClipRRect(
 
       borderRadius: const BorderRadius.all(Radius.circular(40)),
-      child: BottomAppBar(
-        color: primaryColor.withOpacity(0.3),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: items,
+      child: SizedBox(
+        height: AppDimensions.statusBar,
+        child: BottomAppBar(
+          color: primaryColor.withOpacity(0.3),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: items,
+          ),
         ),
       ),
     );
+
   }
 }

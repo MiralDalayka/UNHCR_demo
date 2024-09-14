@@ -18,16 +18,19 @@ class NavigationItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return IconButton(
-
-      icon: CircleAvatar(
-        backgroundColor: isSelected ? Colors.white : Colors.transparent,
-        child: Icon(
-          isSelected ? filledIcon : outlinedIcon,
-          color: isSelected ? thirdColor : Colors.white,
-        ),
+    return Container(
+      decoration:  BoxDecoration(
+        shape: BoxShape.circle,
+        color: isSelected ? Colors.white : Colors.transparent,
       ),
-      onPressed: onPressed,
+      child: IconButton(
+        icon: Icon(
+          isSelected ? filledIcon : outlinedIcon,
+          color:  isSelected ?thirdColor :thirdColor,
+        ),
+        onPressed: onPressed,
+      ),
     );
+
   }
 }
