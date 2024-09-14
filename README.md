@@ -1,16 +1,18 @@
 # unhcr_demo
+a flutter project that view job api data in 2 pages
+To view the last version of code check the (features/view_one_job) bransh 
 
-A new Flutter project.
+screen 1:
+![splash animated screen](https://github.com/user-attachments/assets/d807840e-864a-4c1e-832b-fa072b99ebac)
 
-## Getting Started
+screen 2: view All jobs 
+![home page 1](https://github.com/user-attachments/assets/090426ac-8b76-4d82-b971-c92d448e4bb6)
+![home page 2](https://github.com/user-attachments/assets/7cd5ad6b-7740-4c8f-ba03-d3302314360b)
 
-This project is a starting point for a Flutter application.
+screen 3: view selected job info
+![job info 1](https://github.com/user-attachments/assets/cff2781e-b3ae-4e93-9ca0-8d379dd4c510)
+![job info 2](https://github.com/user-attachments/assets/6c8de31b-dbad-4882-9da0-d9ea37342335)
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
