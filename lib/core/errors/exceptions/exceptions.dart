@@ -1,2 +1,2 @@
-export 'handle_dio_exeptions.dart';
+export 'handle_dio_exceptions.dart';
 export 'server_exception.dart';

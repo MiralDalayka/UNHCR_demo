@@ -1,6 +1,8 @@
-class API_URL{
-  static const String ROOT="api_url";
-  static const String PRODUCT="$ROOT/product"; //example
-  
+abstract class API_URL{
+  /*
+  this api dose not support the filtering so no need to add other key words
+   */
+  static const String ROOT="https://www.unhcrjo.org/jobs/api";
 
 }
+

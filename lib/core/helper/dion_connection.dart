@@ -5,7 +5,7 @@ import 'api/end_points.dart';
 class DioConnection {
   static Dio? _connection;
 
-  DioConnection._Dio();
+  DioConnection.dio();
 
   static Dio get instance {
     _connection ??= Dio(BaseOptions(

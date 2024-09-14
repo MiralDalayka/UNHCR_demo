@@ -1,9 +1,7 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 import 'app_colors.dart';
 import 'font_weights.dart';
-const String appFont = 'Inter';
+const String appFont =  'Work Sans';
 
 abstract final class TextStyles {
   static const TextStyle heading1Bold = TextStyle(
@@ -22,7 +20,7 @@ abstract final class TextStyles {
     fontSize: 20,
     fontWeight: FontWeights.bold,
     fontFamily: appFont,
-      color: Colors.black
+      color: primaryColor
   );
   static const TextStyle heading3Medium = TextStyle(
     fontSize: 20,
@@ -56,6 +54,7 @@ abstract final class TextStyles {
     fontSize: 16,
     fontWeight: FontWeights.regular,
     fontFamily: appFont,
+
   );
 
   static const TextStyle mediumBold = TextStyle(
@@ -89,7 +88,7 @@ abstract final class TextStyles {
     fontSize: 12,
     fontWeight: FontWeights.medium,
     fontFamily: appFont,
-    color: Colors.black87
+    color:thirdColor
   );
 
   static const TextStyle xSmallRegular = TextStyle(

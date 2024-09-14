@@ -2,7 +2,6 @@ import 'dart:convert';
 import 'dart:developer';
 
 import 'package:dio/dio.dart';
-// import 'package:easy_localization/easy_localization.dart';
 
 abstract class Failure {
   final String errorMessage;
@@ -10,28 +9,28 @@ abstract class Failure {
   Failure(this.errorMessage);
 }
 
-class Diohandling extends Failure {
-  Diohandling(super.errorMessage);
+class DioHandling extends Failure {
+  DioHandling(super.errorMessage);
 
-  factory Diohandling.fromDioError(DioException error) {
+  factory DioHandling.fromDioError(DioException error) {
     switch (error.type) {
       case DioExceptionType.connectionTimeout:
-        return Diohandling('انتهت مهلة الاتصال');
+        return DioHandling('انتهت مهلة الاتصال');
       case DioExceptionType.sendTimeout:
-        return Diohandling("انتهت مهلة الارسال");
+        return DioHandling("انتهت مهلة الارسال");
       case DioExceptionType.receiveTimeout:
-        return Diohandling("انتهت مهلة الاستلام");
+        return DioHandling("انتهت مهلة الاستلام");
       case DioExceptionType.badResponse:
         return dioHandlinResponse(
             error.response!.statusCode, error.response!.data);
 
       case DioExceptionType.connectionError:
-        return Diohandling("مشكلة في الاتصال");
+        return DioHandling("مشكلة في الاتصال");
       case DioExceptionType.cancel:
-        return Diohandling("تم الغاء الاتصال");
+        return DioHandling("تم الغاء الاتصال");
 
       default:
-        return Diohandling("حدثت مشكلة في الاتصال الرجاء المحاولة لاحقا");
+        return DioHandling("حدثت مشكلة في الاتصال الرجاء المحاولة لاحقا");
     }
   }
 }
@@ -45,9 +44,9 @@ dioHandlinResponse(int? statusCode, dynamic response) {
       statusCode == 403 ||
       statusCode == 422) {
     //can changes
-    return Diohandling(res['message']);
+    return DioHandling(res['message']);
   } else if (statusCode == 404) {
-    return Diohandling(res['message']);
+    return DioHandling(res['message']);
   } else if (statusCode == 500) {
     // return Diohandling('problem'.tr());
   } else {

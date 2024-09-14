@@ -1,6 +1,6 @@
+import '../../constants/api_urls.dart';
+
 class EndPoint {
-  static String baseUrl="https://api.escuelajs.co/api/v1/";
-  static String signIn="";
-  static String products="products/";
-  static String category="categories/";
+  static String baseUrl=API_URL.ROOT;
+  // static String signIn="";
 }
